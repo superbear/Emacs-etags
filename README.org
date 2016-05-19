@@ -1,0 +1,43 @@
+#+Title:Emacs-config
+#+AUTHOR:superbear
+#+DATE:<2016-05-19 四>
+
+* Etags
+  类似于[[https://zh.wikipedia.org/wiki/Ctags][Ctags]], 一个用于从程序源代码树产生索引文件（或tag文件)，从而便于文本编辑器来实现快速定位的实用工具）
+
+** emacs.php.function.tags
+
+  #+BEGIN_QUOTE
+  * 用etags的时候，发现原生etags[[http://opensource.apple.com//source/emacs/emacs-92/emacs/lib-src/etags.c][sourceCode]] 不会扫描下面这种PHP面向对象写法中的func
+  #+BEGIN_SRC php
+  <?php
+  class Test
+  {
+      public static function a() {
+          echo 'Hello, world';
+      }
+  }
+  #+END_SRC
+
+  * 非常棒，Etags可以通过--regex参数来扩展它。
+  * etags原生php会索引function，所以在自定义正则中，以function开头的就不索引
+  * 详细代码见emacs.php.function.tags
+
+  #+BEGIN_SRC php
+  ####e.g 递归地为当前目录下的php文件中的class,function...生成索引
+  find . -name "*.php" -print | etags --regex=@emacs.php.function.tags
+  #+END_SRC
+  #+END_QUOTE
+
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Etags-Regexps.html#Etags-Regexps][手册]]
+
+* About
+#+BEGIN_QUOTE
+Emacs Version:24.5.1
+Save some config :)
+#+END_QUOTE
+* About
+#+BEGIN_VERSE
+  Emacs Version:24.5.1
+  Save some config :)
+#+END_VERSE
