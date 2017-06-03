@@ -6,7 +6,7 @@
 * Etags
 #+BEGIN_QUOTE
 #+ATTR_HTML: :title Ctags :target _blank
-类似于 [[https://zh.wikipedia.org/wiki/Ctags][Ctags]], 一个用于从程序源代码树产生索引文件（或 tag 文件)，从而便于文本编辑器来实现快速定位的实用工具）[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html#Tags-Tables][Etags 手册]]
+类似于 [[https://zh.wikipedia.org/wiki/Ctags][Ctags]], 一个用于从程序源代码树产生索引文件（或 tag 文件)，从而便于文本编辑器来实现快速定位的实用工具。[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html#Tags-Tables][Etags 手册]]
 #+END_QUOTE
 
 ** emacs.php.function.tags
@@ -22,7 +22,7 @@
   }
   #+END_SRC
 
-  * 非常棒，Etags 可以通过--regex参数来扩展它。
+  * 非常棒，Etags 可以通过 --regex 参数来扩展它。
   * etags 原生 php 会索引 function，所以在自定义正则中，以 function 开头的就不索引
   * 详细代码见 [[Repo-Path:emacs.php.function.tags][emacs.php.function.tags]]
 
