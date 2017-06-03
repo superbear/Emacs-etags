@@ -25,7 +25,7 @@
 
   #+BEGIN_SRC php
   ####e.g 递归地为当前目录下的php文件中的class,function...生成索引
-  find . -name "*.php" -print | etags --regex=@emacs.php.function.tags
+  find . -name "*.php" -print | etags --regex=@emacs.php.function.tags -
   #+END_SRC
   #+END_QUOTE
 
